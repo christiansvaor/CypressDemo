@@ -37,4 +37,9 @@ describe('Pruebas de log', () =>{
         cy.visit('https://the-internet.herokuapp.com/secure');
         cy.get('.subheader').should('include.text', 'Welcome to the Secure Area');
     })
+
+    it.only('El de arriba pero diferente', () => {
+        cy.login();
+        cy.get('.subheader').should('include.text', 'Welcome to the Secure Area');
+    })
 })
